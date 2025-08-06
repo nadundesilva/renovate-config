@@ -1,0 +1,26 @@
+name: Deploy Site
+
+on:
+  - push
+  - pull_request
+
+permissions: read-all
+
+jobs:
+  run-super-linter:
+    name: Run GitHub Super Linter
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Lint Code Base
+        uses: super-linter/super-linter@v8
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
