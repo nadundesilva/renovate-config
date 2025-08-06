@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "mergeConfidence:all-badges",
+    "customManagers:dockerfileVersions",
+    ":rebaseStalePrs",
+    ":separateMajorReleases",
+    ":reviewer(nadundesilva)"
+  ],
+  "labels": ["Type/DependencyUpdate"],
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch", "minor", "digest"],
+      "groupName": "Non-Major Updates",
+      "automerge": true
+    }
+  ]
+}
