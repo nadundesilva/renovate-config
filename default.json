@@ -17,5 +17,6 @@
   ],
   "labels": ["Type/DependencyUpdate"],
   "rangeStrategy": "bump",
-  "ignorePresets": [":ignoreModulesAndTests"]
+  "ignorePresets": [":ignoreModulesAndTests"],
+  "minimumReleaseAge": "3 days"
 }
