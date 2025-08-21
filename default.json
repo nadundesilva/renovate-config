@@ -13,10 +13,17 @@
     ":automergeRequireAllStatusChecks",
     "group:allDigest",
     "group:allNonMajor",
-    "customManagers:dockerfileVersions"
+    "customManagers:dockerfileVersions",
+    ":gomod"
   ],
   "labels": ["Type/DependencyUpdate"],
   "rangeStrategy": "bump",
   "ignorePresets": [":ignoreModulesAndTests"],
-  "minimumReleaseAge": "3 days"
+  "minimumReleaseAge": "3 days",
+  "postUpdateOptions": [
+    "gomodMassage",
+    "gomodTidy",
+    "gomodUpdateImportPaths",
+    "gomodSkipVendor"
+  ]
 }
