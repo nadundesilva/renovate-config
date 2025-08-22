@@ -17,6 +17,7 @@
     ":gomod"
   ],
   "labels": ["Type/DependencyUpdate"],
+  "automergeSchedule": ["* 0-6 1,15 * 1"],
   "rangeStrategy": "bump",
   "ignorePresets": [":ignoreModulesAndTests"],
   "minimumReleaseAge": "3 days",
