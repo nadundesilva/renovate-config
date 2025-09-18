@@ -11,10 +11,11 @@
     ":automergeMinor",
     ":automergePr",
     ":automergeRequireAllStatusChecks",
+    ":gomod",
     "group:allDigest",
     "group:allNonMajor",
     "customManagers:dockerfileVersions",
-    ":gomod"
+    "helpers:pinGitHubActionDigestsToSemver"
   ],
   "labels": ["Type/DependencyUpdate"],
   "automergeSchedule": ["* 0-6 1,15 * 1"],
