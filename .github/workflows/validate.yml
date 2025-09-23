@@ -6,14 +6,13 @@ on:
 
 permissions:
   contents: read
+  packages: read
 
 jobs:
   run-super-linter:
     name: Run GitHub Super Linter
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: read
       statuses: write
     steps:
       - name: Checkout repository
