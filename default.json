@@ -16,6 +16,7 @@
     "group:allNonMajor",
     "customManagers:dockerfileVersions",
     "customManagers:githubActionsVersions",
+    "customManagers:makefileVersions",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
   "labels": ["Type/DependencyUpdate"],
